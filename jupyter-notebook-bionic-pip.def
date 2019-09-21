@@ -9,7 +9,7 @@ apt-get clean
 
 pip3 install graphviz jupyter jupyter_contrib_nbextensions
 /usr/local/bin/jupyter contrib nbextension install --system
-/usr/local/bin/jupyter-nbextensions_configurator
+/usr/local/bin/jupyter-nbextensions_configurator enable
 
 %environment
 
