@@ -11,6 +11,11 @@ pip3 install graphviz jupyter jupyter_contrib_nbextensions jupyter_nbextensions_
 /usr/local/bin/jupyter contrib nbextension install --system
 /usr/local/bin/jupyter-nbextensions_configurator enable --system
 
+# Always display run button at each cell. Remove the following two lines if unnecessary.
+sed -i -e '/div\.run_this_cell/{n;s/none/block/}' /usr/local/lib/python3.7/dist-packages/notebook/static/style/style.min.css
+sed -i -e '/div\.run_this_cell/{n;s/none/block/}' /usr/local/lib/python3.7/dist-packages/notebook/static/style/ipython.min.css
+
+
 %environment
 
 export XDG_RUNTIME_DIR=""
