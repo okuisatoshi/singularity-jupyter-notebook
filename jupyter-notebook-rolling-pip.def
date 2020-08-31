@@ -4,7 +4,7 @@ From: ubuntu:rolling
 %post
 
 apt-get update
-apt-get install -y curl git graphviz python3 python3-pip wget
+DEBIAN_FRONTEND=noninteractive apt-get install -y curl git graphviz python3 python3-pip wget
 apt-get clean
 
 pip3 install graphviz jupyter jupyter_contrib_nbextensions jupyter_nbextensions_configurator jupyterthemes RISE
@@ -23,7 +23,7 @@ sed -i -e '/div\.run_this_cell/{n;s/none/block/}' /usr/local/lib/python3.7/dist-
 %environment
 
 export XDG_RUNTIME_DIR=""
-
+export DEBIAN_FRONTEND=noninteractive
 
 %runscript
 
