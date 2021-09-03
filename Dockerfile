@@ -13,8 +13,8 @@ RUN jupyter-nbextension install rise --py --system && \
     jupyter-nbextension enable rise --py --system
 
 # Always display run button at each cell. Remove the following two lines if unnecessary.
-RUN sed -i -e '/div\.run_this_cell/{n;s/none/block/}' /usr/local/lib/python3.7/dist-packages/notebook/static/style/style.min.css && \
-    sed -i -e '/div\.run_this_cell/{n;s/none/block/}' /usr/local/lib/python3.7/dist-packages/notebook/static/style/ipython.min.css
+#RUN sed -i -e '/div\.run_this_cell/{n;s/none/block/}' /usr/local/lib/python3.7/dist-packages/notebook/static/style/style.min.css && \
+#sed -i -e '/div\.run_this_cell/{n;s/none/block/}' /usr/local/lib/python3.7/dist-packages/notebook/static/style/ipython.min.css
 
 ENV XDG_RUNTIME_DIR=""
 
